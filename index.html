@@ -1,203 +1,171 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>Kênh 14</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: Arial, sans-serif;
-            }
-            .header {
-                background-color: #F0A52B;
-                padding: 15px;
-                position: fixed;
-                width: 100%;
-                z-index: 1000;
-                top: 0;
-            }
-            .logo {
-                font-weight: bold;
-                color: #fff;
-                font-size: 24px;
-            }
-            .menu {
-                display: flex;
-                margin-top: 10px;
-                gap: 20px;
-            }
-            .menu a {
-                color: #fff;
-                font-size: 14px;
-                text-decoration: none;
-            }
-            .search {
-                float: right;
-                padding: 5px;
-                border-radius: 5px;
-                border: none;
-            }
-            .button-search {
-                float: right;
-                padding: 5px;
-                border-radius: 5px;
-                border: none;
-            }
-            .footer {
-                background-color: #333;
-                color: white;
-                text-align: center;
-                padding: 20px;
-                margin-top: 50px;
-            }
-            .container {
-                margin-top: 100px;
-                padding: 20px;
-                max-width: 1200px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .feature {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                gap: 20px;
-                margin-bottom: 30px;
-            }
-            .article {
-                position: relative;
-            }
-            .article img {
-                width: 100%;
-                height: 400px;
-                object-fit: cover;
-                border-radius: 5px;
-            }
-            .tag {
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                background-color: #ff0000;
-                color: white;
-                padding: 5px 10px;
-                border-radius: 3px;
-                font-size: 13px;
-            }
-            .title {
-                color: #333;
-                font-size: 18px;
-                margin: 10px 0;
-            }
-            .excerpt {
-                color: #666;
-                font-size: 14px;
-                line-height: 1.5;
-            }
-            .side-bar {
-                background-color: #f5f5f5;
-                border-radius: 5px;
-                padding: 15px;
-            }
-            .list {
-                list-style: none;
-            }
-            .item {
-                padding: 10px 0;
-                border-bottom: 1px solid #ddd;
-            }
-            .number {
-                background-color: red;
-                color: #fff;
-                padding: 2px 6px;
-                border-radius: 3px;
-                margin-right: 10px;
-            }
-            .new-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
-            }
-            .new-item {
-                border: 1px solid #eee;
-                padding: 10px;
-                border-radius: 5px;
-            }
-            .new-item img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 5px;
-            }
-            .new-title {
-                font-size: 18px;
-                padding: 10px 0;
-                color: #333;
-            }
-        </style>
-    </head>
-    <body>
-        <header class="header">
-            <div class="logo">KÊNH14</div>
-            <nav class="menu">
-                <a href="#">Star</a>
-                <a href="#">TV Show</a>
-                <a href="#">Musik</a>
-                <a href="#">Ciné</a>
-                <a href="#">Đời sống</a>
-            </nav>
-            <form action="">
-                <button class="button-search" type="submit">🔍</button>
-                <input type="text" class="search" placeholder="Tìm kiếm...">
-            </form>
-        </header>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Quản Lý Tín Chỉ Đơn Giản</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-        <div class="container">
-            <!-- nổi bật -->
-            <div class="feature">
-                <div class="article">
-                    <span class="tag">HOT</span>
-                    <img src="https://kenh14cdn.com/zoom/920_578/203336854389633024/2025/4/26/photohbdl-22-17456799460871448999145-27-0-827-1280-crop-1745680155793889400381.jpg" alt="news-hot">
-                    <h2 class="title">Pháo hoa đã rực sáng trên bầu trời TP.HCM tối 26/4: Nhiều người ở lại trung tâm để "cắm trại" chờ buổi tổng duyệt sớm mai</h2>
-                    <p class="excerpt">Với hàng loạt chương trình hấp dẫn để chào mừng kỷ niệm 50 năm Ngày Giải phóng miền Nam, thống nhất đất nước, vậy nên ngay từ sớm, rất đông người dân đã đổ về trung tâm TP.HCM để vui chơi, đồng thời chờ đón những màn trình diễn ấn tượng.</p>
-                </div>
-                <div class="side-bar">
-                    <h3>Xu hướng</h3>
-                    <ul class="list">
-                        <li class="item">
-                            <span class="number">1</span>
-                            <a href="#">Việc tử tế</a>
-                        </li>
-                        <li class="item"> 
-                            <span class="number">2</span>
-                            <a href="#">Bạn của nhà nông</a>
-                        </li>
-                        <li class="item">
-                            <span class="number">3</span>
-                            <a href="#">Dạy nghề</a>
-                        </li>
-                    </ul>
-                </div>
+        body {
+            background-color: #f0f2f5;
+        }
+
+        .header {
+            background-color: #004aad;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav {
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .search-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-input {
+            width: 300px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .btn {
+            background-color: #004aad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #00387d;
+        }
+
+        .course-list {
+            display: grid;
+            grid-gap: 20px;
+        }
+
+        .course-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .schedule {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>HỆ THỐNG ĐĂNG KÝ TÍN CHỈ</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="#dang-ky">Đăng ký học phần</a>
+        <a href="#tkb">Thời khóa biểu</a>
+        <a href="#hoc-phan">Học phần đã đăng ký</a>
+        <a href="#tai-khoan">Tài khoản</a>
+    </nav>
+
+    <div class="container">
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Nhập mã học phần hoặc tên học phần">
+            <button class="btn">Tìm kiếm</button>
+        </div>
+
+        <div class="course-list">
+            <div class="course-item">
+                <h3>Môn học: Lập trình Web</h3>
+                <p>Mã HP: WEB101</p>
+                <p>Số tín chỉ: 3</p>
+                <p>Đã đăng ký: 50/60</p>
+                <button class="btn">Thêm vào đăng ký</button>
             </div>
-            <div class="new-grid">
-                <div class="new-item">
-                    <img src="https://kenh14cdn.com/203336854389633024/2025/4/27/49313435911175550537388268317984913294683742n-1745726965239106617439-1745728961728-17457289618531679796155.jpg" alt="news">
-                    <h3 class="new-title">“Đi dự concert Quốc gia, khi về nhớ dọn sạch rác”: 1 lời nhắc nhở, vạn hình ảnh đẹp!</h3>
-                </div>
-                <div class="new-item">
-                    <img src="https://kenh14cdn.com/203336854389633024/2025/4/27/batchc11472-17457129421091273192910.jpg" alt="news">
-                    <h3 class="new-title">Đi trong vòng tay nhân dân: Những khoảnh khắc xúc động nhất trong buổi tổng duyệt sáng 27/4</h3>
-                </div>
-                <div class="new-item">
-                    <img src="https://kenh14cdn.com/203336854389633024/2025/4/27/batchimg3512-17457124192371861882272.jpg" alt="news">
-                    <h3 class="new-title">Kết thúc tổng duyệt sáng 27/4: Các khối diễu binh tỏa ra 4 hướng, đi giữa tiếng hò reo của người dân</h3>
-                </div>
+
+            <div class="course-item">
+                <h3>Môn học: Cơ sở dữ liệu</h3>
+                <p>Mã HP: DB202</p>
+                <p>Số tín chỉ: 3</p>
+                <p>Đã đăng ký: 45/60</p>
+                <button class="btn">Thêm vào đăng ký</button>
             </div>
         </div>
-  
-        <footer class="footer">
-            <p>© Copyright 2007 - 2025 - Công ty Cổ phần VCCorp</p>
-        </footer>
-    </body>
+
+        <div class="schedule">
+            <h2>Thời khóa biểu</h2>
+            <table>
+                <tr>
+                    <th>Thứ</th>
+                    <th>Tiết học</th>
+                    <th>Môn học</th>
+                    <th>Phòng học</th>
+                </tr>
+                <tr>
+                    <td>Thứ 2</td>
+                    <td>1-3</td>
+                    <td>Lập trình Web</td>
+                    <td>P.301</td>
+                </tr>
+                <tr>
+                    <td>Thứ 4</td>
+                    <td>4-6</td>
+                    <td>Cơ sở dữ liệu</td>
+                    <td>P.405</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
 </html>
