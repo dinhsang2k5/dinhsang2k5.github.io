@@ -146,11 +146,11 @@
 
         <script>
         // Tăng counter khi trang web được load
-        fetch('http://localhost:3000/visit')
+        fetch('https://dinhsang2k5.github.io/')
           .then(response => response.json())
           .then(data => {
               // Lấy số lượng counter mới nhất
-              fetch('http://localhost:3000/count')
+              fetch('https://dinhsang2k5.github.io/')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('counter').textContent = data.count;
