@@ -142,5 +142,21 @@
                 </table>
             </div>
         </div>
+        <h1>Số lượt truy cập: <span id="counter">0</span></h1>
+
+        <script>
+        // Tăng counter khi trang web được load
+        fetch('http://localhost:3000/visit')
+          .then(response => response.json())
+          .then(data => {
+              // Lấy số lượng counter mới nhất
+              fetch('http://localhost:3000/count')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('counter').textContent = data.count;
+                });
+          })
+          .catch(error => console.error('Lỗi:', error));
+        </script>
     </body>
 </html>
