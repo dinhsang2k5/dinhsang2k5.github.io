@@ -1,162 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Trang tín chỉ HAU</title>
         <style>
-            * {
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-                font-family: Arial, sans-serif;
-            }
-            .header {
+            h2 {
                 text-align: center;
-                background-color: #004aad;
-                color: white;
-                padding: 15px;
             }
-            .body {
-                background-color: antiquewhite;
-            }
-            .nav a {
-                text-decoration: none;
-                color: #333;
-                padding: 15px;
-            }
-            .nav {
-                text-align: center;
-                justify-content: space-around;
-                display: flex;
-                background-color: white;
-            }
-            .container {
-                max-width: 1200px;
-                margin: 20px auto;
-                padding: 0 20px;
-            }
-            .search-box {
-                background-color: white;
-                padding: 20px;
-                border-radius: 8px;
-                margin-bottom: 20px;
-            }
-            .input {
-                width: 300px;
-                padding: 10px;
-                margin-right: 10px;
-            }
-            .btn {
-                background-color: #004aad;
-                color:white;
-                border: none;
-                cursor: pointer;
-                padding: 10px 20px;
-                border-radius: 5px;
-            }
-            .btn:hover {
-                background-color: blue;
-            }
-            .list {
-                display: grid;
-                grid-gap: 20px;
-            }
-            .item {
-                background-color: white;
-                padding: 20px;
-                border-radius: 8px;
-            }
-            .schedule {
-                background-color: white;
-                padding: 20px;
-                border-radius: 5px;
-                margin-top: 10px;
-            }
-            table {
-                margin-top: 10px;
-                width: 100%;
-                border-collapse: collapse;
-            }
-            th,td {
-                padding: 8px;
-                text-align: left;
-                border: 1px solid #333;
+            .led {
+                margin-left: 500px;
             }
         </style>
     </head>
-    <body>
-        <header class="header">
-            <h1>HỆ THỐNG ĐĂNG KÝ TÍN CHỈ</h1>
-        </header>
-        <nav class="nav">
-            <a href="#">Đăng ký học phần</a>
-            <a href="#">Thời khóa biểu</a>
-            <a href="#">Học phần đã đăng ký</a>
-            <a href="#">Tài khoản</a>
-        </nav>
-        <div class="container">
-            <!-- nhập tìm kiếm -->
-            <div class="search-box">
-                <input class="input" type="text" placeholder="Nhập tên học phần">
-                <button class="btn">tìm kiếm</button>
-            </div>
-            <!-- môn học -->
-            <div class="list">
-                <div class="item">
-                    <h3>Môn học: Lập trình Web</h3>
-                    <p>Mã HP: WEB101</p>
-                    <p>Số tín chỉ: 3</p>
-                    <p>Đã đăng ký: 50/60</p>
-                    <button class="btn">Thêm vào đăng ký</button>
-                </div>
-                <div class="item">
-                    <h3>Môn học: Cơ sở dữ liệu</h3>
-                    <p>Mã HP: DB202</p>
-                    <p>Số tín chỉ: 3</p>
-                    <p>Đã đăng ký: 45/60</p>
-                    <button class="btn">Thêm vào đăng ký</button>
-                </div>
-            </div>
-            <div class="schedule">
-                <h2>Thời khóa biểu</h2>
-                <table>
-                    <tr>
-                        <th>Thứ</th>
-                        <th>Tiết học</th>
-                        <th>Môn học</th>
-                        <th>Phòng học</th>
-                    </tr>
-                    <tr>
-                        <td>Thứ 2</td>
-                        <td>1-3</td>
-                        <td>Lập trình Web</td>
-                        <td>P.301</td>
-                    </tr>
-                    <tr>
-                        <td>Thứ 4</td>
-                        <td>4-6</td>
-                        <td>Cơ sở dữ liệu</td>
-                        <td>P.405</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <h1>Số lượt truy cập: <span id="counter">0</span></h1>
+<body>
 
-        <script>
-        // Tăng counter khi trang web được load
-        fetch('https://dinhsang2k5.github.io/')
-          .then(response => response.json())
-          .then(data => {
-              // Lấy số lượng counter mới nhất
-              fetch('https://dinhsang2k5.github.io/')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('counter').textContent = data.count;
-                });
-          })
-          .catch(error => console.error('Lỗi:', error));
-        </script>
-    </body>
+<h2>Bật đèn</h2>
+
+<button class="led" onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Turn off the light</button>
+
+</body>
 </html>
