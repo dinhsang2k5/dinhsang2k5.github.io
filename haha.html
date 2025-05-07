@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang cá nhân</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: arial, sans-serif;
+            }
+            body {
+                background-color: beige;
+                line-height: 2;
+            }
+            header {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 60px 0;
+            }
+            .project {
+                /* width: 100px; */
+                height: 200px;
+                border-radius: 50%;
+                margin-bottom: 20px;
+                border: 5px solid white ;
+            }
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                margin-top: 50px;
+            }
+            nav {
+                background-color: #333;
+                padding: 15px 0;
+                position: sticky;
+                top: 0;
+            }
+            nav ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+            }
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            nav a:hover {
+                color: green;
+            }
+            .list {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            section {
+                padding: 50px 0;
+            }
+            .topic {
+                text-align: center;
+                margin-bottom: 50px;
+                color: #333;
+            }
+            .content {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+            .skill-1 {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+            }
+            .skill-2 {
+                background-color: white;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            }
+            .idea-1 {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+            }
+            .idea-2 {
+                background-color: white;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+            }
+            .idea-2 img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            .idea-3 {
+                padding: 15px;
+            }
+            .send-1 {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+            }
+            button {
+                background-color: rgb(71, 145, 71);
+                color: white;
+                padding: 10px 30px;
+                border: none;
+                border-radius: 5px;
+                font-size: 15px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/480229356_1324719755514333_8401069374551771483_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG77sH6GR0Kh3lURnEKm00SjOf9GotUaSmM5_0ai1RpKeO3QnzcLNFgKNHSw1-ooHhRBBENPI8ca5lRB2lgEyIm&_nc_ohc=NsV67eYf7JUQ7kNvwHKZ8iZ&_nc_oc=AdkQftP8gLFneCbsOzMx_2EygiXOpkdHmy-8AznswDXngmzeewBhtwvkOvn9qbu04LDMCvSv0C5-kD9qzmzmAhJ3&_nc_zt=23&_nc_ht=scontent.fhan14-2.fna&_nc_gid=mrGsQYjrEFal32m3qC1BdQ&oh=00_AfJlO2XX2H3gw738dQfONyWsPDonXM-FVK13VYxjVeBQdg&oe=68213B9B" alt="avatar" class="project">
+            <h1>Nga lồng lộn</h1>
+            <p>23CN3/Đại học Kiến trúc Hà Nội</p>
+        </header>
+        <nav>
+            <ul class="list">
+                <li><a href="#name">giới thiệu</a></li>
+                <li><a href="#skill">kỹ năng</a></li>
+                <li><a href="#idea">dự án</a></li>
+                <li><a href="#send">liên hệ</a></li>
+            </ul>
+        </nav>
+        <main class="list">
+            <section id="name">
+                <h2 class="topic">giới thiệu</h2>
+                <div class="content">
+                    <div>
+                        <h3>Tôi là Nga hâm hấp</h3>
+                        <p>Tôi là sinh viên năm hai</p>
+                    </div>
+                </div>
+            </section>
+            <section id="skill">
+                <h2 class="topic">Kỹ năng</h2>
+                <div class="skill-1">
+                    <div class="skill-2">
+                        <h3>Lập trình top1 (chắc thế)</h3>
+                        <p>hát tê mờ lờ, ci ét ét, da va sờ cờ ríp</p>
+                    </div>
+                    <div class="skill-2">
+                        <h3>Thiết kế</h3>
+                        <p>UI/UX, PHOTOSHOP</p>
+                    </div>
+                </div>
+            </section>
+            <section id="idea">
+                <h2 class="topic">Dự án</h2>
+                <div class="idea-1">
+                    <div class="idea-2">
+                        <img src="https://jaro-website.s3.ap-south-1.amazonaws.com/2024/07/14-Best-HTML-Project-Ideas-Topics-2024.jpg" alt="">
+                        <div class="idea-3">
+                            <h3>Dự án web</h3>
+                            <p>làm web cũng easy(trẻ trâu)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="send">
+                <h2 class="topic">Liên hệ</h2>
+                <form class="send-1">
+                    <input type="text" placeholder="Tên của bạn" required>
+                    <input type="email" placeholder="email" required>
+                    <textarea style="resize: none;" rows="5" placeholder="Nội dung tin nhắn"></textarea>
+                    <button type="submit">gửi tin nhắn</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 Bản quyền thuộc về Sang đẹp trai</p>
+        </footer>
+    </body>
+</html>
