@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            background-color: #141414;
+            padding: 20px 50px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #E50914;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+        }
+        .nav-links a:hover {
+            color: #E50914;
+        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #E50914;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: red;
+        }
+        /* Movie Row */
+        .movie-row {
+            padding: 20px 50px;
+            color: white;
+        }
+
+        .row-title {
+            margin-bottom: 15px;
+        }
+
+        .movies-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+        }
+
+        .movie-card {
+            min-width: 200px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #141414;
+            color: #808080;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">NETFLIX</div>
+        <nav class="nav-links">
+            <a href="#">Trang chủ</a>
+            <a href="#">Phim</a>
+            <a href="#">Mới & Phổ biến</a>
+            <a href="#">Danh sách của tôi</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Chương trình TV không giới hạn</h1>
+            <p>Xem ở mọi nơi. Hủy bất kỳ lúc nào.</p>
+            <button class="cta-button">XEM NGAY</button>
+        </div>
+    </section>
+
+    <!-- Movie Rows -->
+    <div class="movie-row">
+        <h2 class="row-title">Phim đang thịnh hành</h2>
+        <div class="movies-container">
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/7/70/Ironmanposter.JPG')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/b/b0/Shaolinsoccerposter.jpg')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/0/0e/Tuyet_dinh_cong_phu.jpg')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/b/b0/Avatar-Teaser-Poster.jpg')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/a/a2/Nezha_film_poster.jpg')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/f/f1/Vua_s%C6%B0_t%E1%BB%AD_2019.jpg')"></div>
+        </div>
+    </div>
+
+    <div class="movie-row">
+        <h2 class="row-title">Phim hành động</h2>
+        <div class="movies-container">
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/b/b4/Boyka_Undisputed.jpg')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/IpMan3.jpg/250px-IpMan3.jpg')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/d/d5/Karate_kid_ver2.jpg')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/5/50/Ong_Bak_-_Truy_t%C3%ACm_t%C6%B0%E1%BB%A3ng_Ph%E1%BA%ADt.jpg')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/d/d6/Poster_phim_C%E1%BA%A3nh_s%C3%A1t_ng%C6%B0%E1%BB%9Di_m%C3%A1y_2014.jpg')"></div>
+            <div class="movie-card" style="background-image: url('https://upload.wikimedia.org/wikipedia/vi/8/84/Rocky_anthology_dvd_cover.jpg')"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Netflix Clone. All rights reserved.</p>
+    </footer>
+</body>
+</html>
