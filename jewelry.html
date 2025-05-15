@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Jewelry</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header */
+        header {
+            background-color: #111;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: #gold;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+        }
+
+        /* Banner */
+        .banner {
+            height: 600px;
+            background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(203, 195, 195, 0));
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .banner-content {
+            color: #fff;
+        }
+
+        .banner-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .product-name {
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .product-price {
+            color: #gold;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: gold;
+            color: #111;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ffd700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .banner h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">LUXURY</a>
+            <div class="nav-links">
+                <a href="#home">Trang chủ</a>
+                <a href="#products">Sản phẩm</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#contact">Liên hệ</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Bộ Sưu Tập Mới 2024</h1>
+            <p>Khám phá những thiết kế độc quyền</p>
+            <a href="#products" class="btn">Xem Bộ Sưu Tập</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Sản Phẩm Nổi Bật</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1m_vricVx28VmCh4LTUjdEMdUBmlQwkNGmQ&s" alt="Nhẫn" class="product-img">
+                <h3 class="product-name">Nhẫn Kim Cương Vàng Trắng</h3>
+                <p class="product-price">$1,299</p>
+                <a href="#" class="btn">Xem chi tiết</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOYWTFQwzNt5fEiQ-8rkbrEUp0t953BJypvA&s" alt="Dây chuyền" class="product-img">
+                <h3 class="product-name">Dây Chuyền Ngọc Trai</h3>
+                <p class="product-price">$899</p>
+                <a href="#" class="btn">Xem chi tiết</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuG__3N2I2DYMud0MLkf9CQktplHCCIcrENA&s" alt="Bông tai" class="product-img">
+                <h3 class="product-name">Bông Tai Sapphire</h3>
+                <p class="product-price">$599</p>
+                <a href="#" class="btn">Xem chi tiết</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Luxury Jewelry. All rights reserved</p>
+        <p>Địa chỉ: 123 Đường ABC, TP.HCM</p>
+        <p>Email: contact@luxury.com</p>
+    </footer>
+</body>
+</html>
