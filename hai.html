@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trang Hài Hài</title>
+<style>
+  body {
+    background-color: #fef6e4;
+    font-family: 'Comic Sans MS', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  h1 {
+    color: #ff6b6b;
+    font-size: 3rem;
+    animation: bounce 1s infinite;
+  }
+  button {
+    background-color: #8ecae6;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  button:hover {
+    transform: rotate(10deg) scale(1.1);
+    background-color: #219ebc;
+    color: white;
+  }
+  img {
+    width: 200px;
+    margin-top: 20px;
+    transition: transform 0.5s;
+  }
+  img.spin {
+    transform: rotate(360deg);
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+</style>
+</head>
+<body>
+<h1>Xin chào bạn hài hước!</h1>
+<button onclick="makeItSpin()">Bấm tui đi nè!</button>
+<img id="funnyImage" src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/meme_cute_co_chu_db5f361ff3.jpg" alt="Meme Hài" />
+
+<script>
+function makeItSpin() {
+  const img = document.getElementById('funnyImage');
+  img.classList.add('spin');
+  setTimeout(() => img.classList.remove('spin'), 500);
+  alert('Bạn vừa khiến tui xoay như chong chóng 🤣');
+}
+</script>
+</body>
+</html>
